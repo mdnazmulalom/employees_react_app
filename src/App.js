@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Employee from './components/Employee';
 
 function App() {
   const [employees, setEmployees] = useState([])
@@ -21,7 +22,7 @@ function App() {
     <div className="App">
     {
       employees.map(employee =>{
-        return  <p>{employee.firstName}</p>
+        return  <Employee employee={employee}/>
 
       })
     }
